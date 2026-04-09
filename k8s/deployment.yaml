@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-dash
+  namespace: factory-stock-dash-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-dash
+  template:
+    metadata:
+      labels:
+        app: stock-dash
+    spec:
+      containers:
+      - name: stock-dash
+        image: nginxdemos/hello:plain-text
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: stock-dash-config
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi

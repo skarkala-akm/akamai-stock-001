@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stock-dash-config
+  namespace: factory-stock-dash-dev
+data:
+  STOCK_SYMBOL: "AKAM"
+  STOCK_PROVIDER: "Yahoo Finance"
+  REFRESH_INTERVAL_SECONDS: "60"
+  PORT: "3000"

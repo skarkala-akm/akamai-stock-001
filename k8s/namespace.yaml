@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: factory-stock-dash-dev
+  labels:
+    factory.ai/app: stock-dash
+    factory.ai/env: dev
+    factory.ai/runId: "001"
