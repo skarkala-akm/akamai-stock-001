@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: stock-dash-config
+  name: team-factory
   namespace: factory-stock-dash-dev
 data:
   STOCK_SYMBOL: "AKAM"
