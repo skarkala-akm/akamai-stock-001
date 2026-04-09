@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: stock-dash
-  namespace: factory-stock-dash-dev
+  namespace: team-factory
 spec:
   type: ClusterIP
   selector:
