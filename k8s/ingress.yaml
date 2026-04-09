@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: stock-dash
-  namespace: factory-stock-dash-dev
+  namespace: team-factory
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
