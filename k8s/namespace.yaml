@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: factory-stock-dash-dev
+  name: team-factory
   labels:
     factory.ai/app: stock-dash
     factory.ai/env: dev
