@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: stock-dash
-  namespace: factory-stock-dash-dev
+  namespace: team-factory
 spec:
   replicas: 1
   selector:
